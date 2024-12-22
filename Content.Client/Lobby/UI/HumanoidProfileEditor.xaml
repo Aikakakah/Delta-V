@@ -102,6 +102,7 @@
                             <BoxContainer Margin="10" Orientation="Horizontal">
                                 <humanoid:SingleMarkingPicker Name="HairStylePicker" Category="Hair" />
                                 <humanoid:SingleMarkingPicker Name="FacialHairPicker" Category="FacialHair" />
+                                <Button Name="FlipHairButton" Text="Flip Hair" HorizontalAlignment="Right"/>
                             </BoxContainer>
                             <!-- Eyes -->
                             <BoxContainer Margin="10" Orientation="Vertical">

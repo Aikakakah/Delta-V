@@ -340,6 +340,14 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Hair
+            // private void FlipHair_OnPressed(BaseButton.ButtonEventArgs obj){
+            //     if (Profile is null || HairStylePicker.SelectedMarking is not { } hair){
+            //         return;
+            //     }
+            //     _netManager.ClientSendMessage(new HairFlipMsg(hair.Id));
+            // }
+
+
 
             #region SpawnPriority
 
@@ -753,6 +761,8 @@ namespace Content.Client.Lobby.UI
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
+
+            //UpdateHairFlip();
 
             RefreshAntags();
             RefreshJobs();
@@ -1446,6 +1456,13 @@ namespace Content.Client.Lobby.UI
                 Profile.Species,
                 1);
         }
+
+        // private void UpdateHairFlip(BaseButton.ButtonEventArgs obj){
+        //     if (Profile is null || HairStylePicker.SelectedMarking is not { } hair){
+        //         return;
+        //     }
+        //     _netManager.ClientSendMessage(new HairFlipMsg(hair.Id));
+        // }
 
         private void UpdateCMarkingsHair()
         {

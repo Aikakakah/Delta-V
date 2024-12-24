@@ -91,6 +91,12 @@
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="SpawnPriorityButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
+                                <!-- Hair Flip Priority -->
+                                <!-- <BoxContainer HorizontalExpand="True">
+                                    <Label Text="{Loc 'humanoid-profile-editor-flip-haira'}" />
+                                    <Control HorizontalExpand="True"/>
+                                    <OptionButton Name="FlipHairA" HorizontalAlignment="Right" />
+                                </BoxContainer> -->
                             </BoxContainer>
                             <!-- Skin -->
                             <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">
@@ -102,8 +108,12 @@
                             <BoxContainer Margin="10" Orientation="Horizontal">
                                 <humanoid:SingleMarkingPicker Name="HairStylePicker" Category="Hair" />
                                 <humanoid:SingleMarkingPicker Name="FacialHairPicker" Category="FacialHair" />
-                                <Button Name="FlipHairButton" Text="Flip Hair" HorizontalAlignment="Right"/>
+                                <!-- <Button Name="FlipHairB" Pressed="False" ToggleMode="True" Text="{Loc 'humanoid-profile-editor-flip-hairb'}"/> -->
                             </BoxContainer>
+                            <!-- <BoxContainer Margin="10" Orientation="Vertical">
+                                <Label Text="{Loc 'humanoid-profile-editor-flip-hairc'}" />
+                                <Button Name="FlipHairC" Pressed="False" ToggleMode="True"/>
+                            </BoxContainer> -->
                             <!-- Eyes -->
                             <BoxContainer Margin="10" Orientation="Vertical">
                                 <Label Text="{Loc 'humanoid-profile-editor-eyes-label'}" />

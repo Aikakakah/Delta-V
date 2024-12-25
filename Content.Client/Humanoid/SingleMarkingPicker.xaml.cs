@@ -5,6 +5,8 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Client.Utility;
 
+using Robust.Shared.Log;    //Delete later, just for marking logs
+
 namespace Content.Client.Humanoid;
 
 [GenerateTypedNameReferences]
@@ -123,6 +125,7 @@ public sealed partial class SingleMarkingPicker : BoxContainer
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
+        FlipHairButton.OnPressed += _ => FlipHair();
         MarkingList.OnItemSelected += SelectMarking;
         AddButton.OnPressed += _ =>
         {
@@ -143,6 +146,16 @@ public sealed partial class SingleMarkingPicker : BoxContainer
         {
             PopulateList(args.Text);
         };
+    }
+    private void FlipHair()
+    {
+        //logger.info("Hi!");
+        PrintMessage("Hello World!");
+    }  
+    private static void PrintMessage(string message)
+    {
+        // Console.WriteLine wrapped to prevent direct typecheck issues.
+        Logger.Info(message);
     }
 
     public void UpdateData(List<Marking> markings, string species, int totalPoints)
@@ -272,8 +285,10 @@ public sealed partial class SingleMarkingPicker : BoxContainer
         Search.Visible = Slot >= 0;
         AddButton.HorizontalExpand = Slot < 0;
         RemoveButton.HorizontalExpand = Slot < 0;
+        FlipHairButton.HorizontalExpand = Slot < 0;
         AddButton.Disabled = PointsLeft == 0 && _totalPoints > -1 ;
         RemoveButton.Disabled = PointsUsed == 0;
+        FlipHairButton.Disabled = PointsUsed == 0;
         SlotSelector.Clear();
 
         if (Slot < 0)

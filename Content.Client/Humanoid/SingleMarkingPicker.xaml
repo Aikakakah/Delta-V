@@ -7,7 +7,8 @@
     <BoxContainer Name="SlotSelectorContainer" HorizontalExpand="True">
         <OptionButton Name="SlotSelector" HorizontalExpand="True" StyleClasses="OpenBoth" />
         <Button Name="AddButton" Text="{Loc 'marking-slot-add'}" StyleClasses="OpenBoth" />
-        <Button Name="RemoveButton" Text="{Loc 'marking-slot-remove'}" StyleClasses="OpenLeft" />
+        <Button Name="RemoveButton" Text="{Loc 'marking-slot-remove'}" StyleClasses="OpenBoth" />
+        <Button Name="FlipHairButton" ToggleMode="True" Text="{Loc 'marking-slot-flip-hair'}" StyleClasses="OpenLeft" />
     </BoxContainer>
     <LineEdit Name="Search" PlaceHolder="{Loc 'markings-search'}" HorizontalExpand="True" />
 

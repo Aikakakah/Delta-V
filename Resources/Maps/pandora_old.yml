@@ -1,17 +1,6 @@
 meta:
-  format: 7
-  category: Map
-  engineVersion: 249.0.0
-  forkId: ""
-  forkVersion: ""
-  time: 04/06/2025 20:11:38
-  entityCount: 8690
-maps:
-- 1
-grids:
-- 2
-orphans: []
-nullspace: []
+  format: 6
+  postmapinit: false
 tilemap:
   0: Space
   56: FloorArcadeBlue2
@@ -89,6 +78,7 @@ entities:
     - type: MovedGrids
     - type: Broadphase
     - type: OccluderTree
+    - type: LoadedMap
   - uid: 2
     components:
     - type: MetaData
@@ -3730,6 +3720,21 @@ entities:
     components:
     - type: Transform
       pos: -28.5,37.5
+      parent: 2
+  - uid: 7599
+    components:
+    - type: Transform
+      pos: 3.5,-5.5
+      parent: 2
+  - uid: 8250
+    components:
+    - type: Transform
+      pos: 34.5,49.5
+      parent: 2
+  - uid: 8263
+    components:
+    - type: Transform
+      pos: 26.5,49.5
       parent: 2
   - uid: 8328
     components:
@@ -7479,11 +7484,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -43.5,-15.5
       parent: 2
-  - uid: 3831
-    components:
-    - type: Transform
-      pos: 0.5,31.5
-      parent: 2
   - uid: 3888
     components:
     - type: Transform
@@ -9996,18 +9996,6 @@ entities:
     - type: Transform
       pos: -12.493903,25.64518
       parent: 2
-- proto: DVSmartFridgeMedical
-  entities:
-  - uid: 5090
-    components:
-    - type: Transform
-      pos: -34.5,-2.5
-      parent: 2
-  - uid: 5245
-    components:
-    - type: Transform
-      pos: -19.5,1.5
-      parent: 2
 - proto: EmergencyRollerBed
   entities:
   - uid: 8034
@@ -10815,7 +10803,23 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -27.5,-36.5
       parent: 2
-- proto: FloraTree
+- proto: FloraTree01
+  entities:
+  - uid: 8127
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -20.835772,-39.522457
+      parent: 2
+- proto: FloraTree02
+  entities:
+  - uid: 8129
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -20.808254,-33.96365
+      parent: 2
+- proto: FloraTree04
   entities:
   - uid: 8126
     components:
@@ -10823,18 +10827,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -26.174429,-34.211323
       parent: 2
-  - uid: 8127
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -20.835772,-39.522457
-      parent: 2
-  - uid: 8129
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -20.808254,-33.96365
-      parent: 2
+- proto: FloraTree05
+  entities:
   - uid: 8130
     components:
     - type: Transform
@@ -16102,24 +16096,6 @@ entities:
     - type: Transform
       pos: 7.5,-9.5
       parent: 2
-- proto: PoweredDimSmallLight
-  entities:
-  - uid: 3228
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -8.5,-48.5
-      parent: 2
-  - uid: 3229
-    components:
-    - type: Transform
-      pos: -7.5,-46.5
-      parent: 2
-  - uid: 4505
-    components:
-    - type: Transform
-      pos: 8.5,-68.5
-      parent: 2
 - proto: Poweredlight
   entities:
   - uid: 249
@@ -16443,6 +16419,24 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 13.5,19.5
+      parent: 2
+- proto: PoweredSmallLightMaintenanceRed
+  entities:
+  - uid: 3228
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -8.5,-48.5
+      parent: 2
+  - uid: 3229
+    components:
+    - type: Transform
+      pos: -7.5,-46.5
+      parent: 2
+  - uid: 4505
+    components:
+    - type: Transform
+      pos: 8.5,-68.5
       parent: 2
 - proto: Protolathe
   entities:
@@ -21299,6 +21293,18 @@ entities:
     - type: Transform
       pos: -13.5,64.5
       parent: 2
+- proto: SmartFridge
+  entities:
+  - uid: 5090
+    components:
+    - type: Transform
+      pos: -34.5,-2.5
+      parent: 2
+  - uid: 5245
+    components:
+    - type: Transform
+      pos: -19.5,1.5
+      parent: 2
 - proto: SMESBasic
   entities:
   - uid: 344
@@ -22436,7 +22442,7 @@ entities:
     - type: Transform
       pos: 9.5,-66.5
       parent: 2
-- proto: SuitStorageSecDeltaV
+- proto: SuitStorageSec
   entities:
   - uid: 397
     components:
